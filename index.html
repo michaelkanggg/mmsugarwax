@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM Sugar Wax — Organic Hair Removal</title>
+<meta name="description" content="Premium organic sugaring hair removal in White Plains & Bronx, NY. All-natural ingredients. Powered by Naked Lab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   DESIGN SYSTEM — Earth Tone Luxury
+   Based on Naked Lab palette
+   ============================================ */
+:root {
+  --cream: #FAF8F3;
+  --sand: #EDE8DC;
+  --linen: #D9D0BF;
+  --gold: #C9952A;
+  --gold-light: #E8B84B;
+  --bark: #7A6652;
+  --stone: #4A4540;
+  --ink: #2A2420;
+  --white: #FFFFFF;
+  --blue-pro: #2A8FBD;
+  --teal-retail: #1AACAC;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --section-padding: clamp(60px, 10vw, 120px);
+  --container-width: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.15; }
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+.subhead {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--bark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 24px;
+  transition: all 0.4s ease;
+  background: rgba(250, 248, 243, 0.0);
+}
+
+.nav.scrolled {
+  background: rgba(250, 248, 243, 0.96);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.nav-logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-book {
+  padding: 10px 24px;
+  background: var(--gold);
+  color: var(--white) !important;
+  transition: background 0.3s;
+}
+
+.nav-book:hover {
+  background: var(--gold-light) !important;
+}
+
+/* Mobile Menu */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 1.5px;
+  background: var(--ink);
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--cream);
+  z-index: 999;
+  padding: 100px 40px 40px;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--ink);
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: var(--gold);
+}
+
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1600&q=80') center/cover no-repeat;
+  filter: brightness(0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 120px 0 80px;
+  margin-left: clamp(24px, 8vw, 120px);
+}
+
+.hero-content .subhead {
+  color: var(--gold-light);
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+
+.hero-content p {
+  color: rgba(250, 248, 243, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero .btn-primary {
+  background: var(--gold);
+}
+.hero .btn-primary:hover {
+  background: var(--gold-light);
+}
+
+.hero .btn-outline {
+  border-color: rgba(250, 248, 243, 0.5);
+  color: var(--cream);
+}
+.hero .btn-outline:hover {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+
+/* ============================================
+   SECTION: WHY SUGARING
+   ============================================ */
+.why-section {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+
+.why-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.why-header .subhead { margin-bottom: 12px; }
+.why-header h2 { margin-bottom: 16px; color: var(--ink); }
+.why-header p { color: var(--bark); font-size: 1rem; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.why-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--sand);
+}
+
+.why-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.why-card h4 {
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: var(--bark);
+  line-height: 1.7;
+}
+
+/* ============================================
+   SECTION: SERVICES PREVIEW
+   ============================================ */
+.services-preview {
+  padding: var(--section-padding) 0;
+  background: var(--sand);
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.services-header div:first-child .subhead { margin-bottom: 12px; }
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  border-radius: 4px;
+}
+
+.service-card img,
+.service-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card:hover img,
+.service-card:hover .service-card-bg {
+  transform: scale(1.05);
+}
+
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42,36,32,0.8) 0%, rgba(42,36,32,0) 60%);
+  z-index: 1;
+}
+
+.service-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 24px;
+  z-index: 2;
+  color: var(--cream);
+}
+
+.service-card-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.service-card-content p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ============================================
+   SECTION: NAKED LAB TEASER (on Home)
+   ============================================ */
+.nakedlab-teaser {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+
+.nakedlab-teaser-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.nakedlab-teaser-image {
+  aspect-ratio: 4/5;
+  background: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80') center/cover;
+  border-radius: 4px;
+}
+
+.nakedlab-teaser-text .subhead { margin-bottom: 12px; }
+.nakedlab-teaser-text h2 { margin-bottom: 20px; }
+.nakedlab-teaser-text p {
+  color: var(--bark);
+  margin-bottom: 32px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   SECTION: BOOK CTA BANNER
+   ============================================ */
+.book-banner {
+  padding: 80px 0;
+  background: var(--ink);
+  text-align: center;
+}
+
+.book-banner .subhead { color: var(--gold-light); margin-bottom: 12px; }
+.book-banner h2 { color: var(--cream); margin-bottom: 16px; }
+.book-banner p { color: rgba(250,248,243,0.7); margin-bottom: 32px; font-size: 1rem; }
+
+/* ============================================
+   SECTION: FULL SERVICES PAGE
+   ============================================ */
+.services-full {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+
+.services-intro {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.services-intro .subhead { margin-bottom: 12px; }
+.services-intro h2 { margin-bottom: 20px; }
+.services-intro p { color: var(--bark); font-size: 1rem; line-height: 1.8; }
+
+.menu-section { margin-bottom: 48px; }
+
+.menu-section-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid var(--linen);
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(217, 208, 191, 0.5);
+}
+
+.menu-item-name {
+  font-size: 0.95rem;
+  color: var(--stone);
+}
+
+.menu-item-price {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+/* Prep & FAQ */
+.prep-section {
+  padding: var(--section-padding) 0;
+  background: var(--sand);
+}
+
+.prep-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.prep-grid h3 { margin-bottom: 20px; }
+.prep-grid p, .prep-grid li {
+  color: var(--bark);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.prep-grid ul {
+  list-style: none;
+  padding: 0;
+}
+.prep-grid li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.prep-grid li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--linen);
+  padding: 20px 0;
+}
+
+.faq-q {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink);
+}
+
+.faq-q::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+
+.faq-item.open .faq-q::after {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: var(--bark);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding-top: 12px;
+}
+
+/* ============================================
+   SECTION: NAKED LAB FULL LANDING
+   ============================================ */
+.nakedlab-landing {
+  padding: var(--section-padding) 0;
+  background: var(--cream);
+}
+
+/* Brand Story */
+.nl-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.nl-story-text .subhead { margin-bottom: 12px; }
+.nl-story-text h2 { margin-bottom: 20px; }
+.nl-story-text p {
+  color: var(--bark);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.nl-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.nl-stat-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.nl-stat-label {
+  font-size: 0.8rem;
+  color: var(--bark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nl-story-image {
+  aspect-ratio: 4/5;
+  background: var(--sand);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.nl-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Lines */
+.nl-products-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nl-products-header .subhead { margin-bottom: 12px; }
+
+.nl-line-section {
+  margin-bottom: 60px;
+}
+
+.nl-line-label {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.nl-line-label.sugaring { background: var(--gold); }
+.nl-line-label.professional { background: var(--blue-pro); }
+.nl-line-label.retail { background: var(--teal-retail); }
+
+.nl-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.nl-product-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nl-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(42,36,32,0.08);
+}
+
+.nl-product-img {
+  aspect-ratio: 1;
+  background: var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nl-product-img img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.nl-product-placeholder {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--linen);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nl-product-placeholder svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--linen);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.nl-product-info {
+  padding: 20px;
+}
+
+.nl-product-info h4 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.nl-product-info .nl-product-size {
+  font-size: 0.8rem;
+  color: var(--bark);
+  margin-bottom: 8px;
+}
+
+.nl-product-info p {
+  font-size: 0.85rem;
+  color: var(--stone);
+  line-height: 1.6;
+}
+
+/* Trust Badges */
+.nl-trust {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.nl-trust h3 {
+  margin-bottom: 40px;
+}
+
+.nl-badges {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.nl-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 140px;
+}
+
+.nl-badge-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nl-badge-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.nl-badge-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--stone);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Exclusive Message */
+.nl-exclusive {
+  margin-top: 60px;
+  padding: 48px;
+  background: var(--ink);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.nl-exclusive p {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--cream);
+  font-style: italic;
+}
+
+.nl-exclusive span {
+  color: var(--gold-light);
+}
+
+/* ============================================
+   SECTION: LOCATIONS
+   ============================================ */
+.locations-section {
+  padding: var(--section-padding) 0;
+  background: var(--sand);
+}
+
+.locations-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.locations-header .subhead { margin-bottom: 12px; }
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.location-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.location-map {
+  aspect-ratio: 16/9;
+  background: var(--linen);
+  position: relative;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.location-info {
+  padding: 32px;
+}
+
+.location-info h3 {
+  margin-bottom: 12px;
+}
+
+.location-info p {
+  font-size: 0.9rem;
+  color: var(--bark);
+  line-height: 1.8;
+  margin-bottom: 4px;
+}
+
+.location-info a {
+  color: var(--gold);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.location-info a:hover {
+  color: var(--gold-light);
+}
+
+.location-cta {
+  margin-top: 16px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  padding: 60px 0 32px;
+  background: var(--ink);
+  color: rgba(250,248,243,0.7);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand .nav-logo {
+  color: var(--cream);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.footer-col h5 {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.footer-col ul { list-style: none; }
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: var(--gold-light);
+}
+
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(250,248,243,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(250,248,243,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.footer-social a:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--cream);
+}
+
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  z-index: 900;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   SECTION DIVIDERS / ANCHORS
+   ============================================ */
+.section-anchor {
+  scroll-margin-top: 72px;
+}
+
+.divider-line {
+  width: 60px;
+  height: 1.5px;
+  background: var(--gold);
+  margin: 0 auto 32px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+
+  .why-grid,
+  .service-cards,
+  .nl-product-grid { grid-template-columns: 1fr; }
+
+  .service-cards { grid-template-columns: repeat(2, 1fr); }
+  .nl-product-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .nakedlab-teaser-inner,
+  .nl-story,
+  .menu-grid,
+  .prep-grid,
+  .locations-grid { grid-template-columns: 1fr; }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-content {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-cards,
+  .nl-product-grid { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .nl-stats { flex-direction: column; gap: 20px; }
+
+  .nl-badges { gap: 32px; }
+
+  .nl-exclusive { padding: 32px 20px; }
+
+  .nl-exclusive p { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">MM <span>Sugar Wax</span></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#nakedlab">Naked Lab</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#book" class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">&times;</button>
+  <a href="#home" onclick="toggleMobileMenu()">Home</a>
+  <a href="#services" onclick="toggleMobileMenu()">Services</a>
+  <a href="#nakedlab" onclick="toggleMobileMenu()">Naked Lab</a>
+  <a href="#locations" onclick="toggleMobileMenu()">Locations</a>
+  <a href="#book" onclick="toggleMobileMenu()">Book Now</a>
+</div>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="subhead">Organic Hair Removal</p>
+    <h1>Feel the Difference of Going Natural</h1>
+    <p>Gentle, effective sugaring made with just three pure ingredients — sugar, lemon, and water. Your skin deserves nothing less.</p>
+    <div class="hero-buttons">
+      <a href="#book" class="btn btn-primary">Book Your Visit</a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY SUGARING
+     ============================================ -->
+<section class="why-section section-anchor" id="why">
+  <div class="container">
+    <div class="why-header fade-in">
+      <p class="subhead">Why Sugaring</p>
+      <h2>Nature's Way to Smooth Skin</h2>
+      <p>A gentle, ancient technique reimagined for modern skincare. No chemicals, no harsh pulls — just pure, natural results.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M8 12l3 3 5-5"/></svg>
+        </div>
+        <h4>100% Organic</h4>
+        <p>Only three ingredients — sugar, lemon, and water. Biodegradable, chemical-free, and EWG Green Level rated.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h4>Gentle on Skin</h4>
+        <p>Applied against hair growth and removed in the natural direction, minimizing pain, irritation, and breakage.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Fewer Ingrowns</h4>
+        <p>Water-soluble sugar paste penetrates deep into follicles, removing hair from the root with less risk of ingrown hairs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICES PREVIEW
+     ============================================ -->
+<section class="why-mm section-anchor" id="services" style="padding: var(--section-padding) 0; background: var(--sand);">
+  <div class="container">
+    <div class="why-mm-header fade-in" style="text-align:center; max-width:640px; margin: 0 auto 56px;">
+      <p class="subhead">Why MM Sugar Wax</p>
+      <h2>The Standard You Deserve</h2>
+    </div>
+    <div class="why-mm-grid fade-in" style="display:grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-bottom: 48px;">
+
+      <!-- Card 1 -->
+      <div style="background: var(--white); padding: 40px 36px; border-radius: 4px;">
+        <div style="width:52px; height:52px; background:var(--sand); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h4 style="font-family:var(--font-display); font-size:1.35rem; font-weight:500; margin-bottom:12px; color:var(--ink);">Women-Owned &amp; Proudly Independent</h4>
+        <p style="font-size:0.9rem; color:var(--bark); line-height:1.8;">Founded and run by Mariana — a woman who built this from the ground up because she believed her community deserved a cleaner, gentler alternative to traditional waxing.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="background: var(--white); padding: 40px 36px; border-radius: 4px;">
+        <div style="width:52px; height:52px; background:var(--sand); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M8 12l3 3 5-5"/></svg>
+        </div>
+        <h4 style="font-family:var(--font-display); font-size:1.35rem; font-weight:500; margin-bottom:12px; color:var(--ink);">Organic-Only. No Exceptions.</h4>
+        <p style="font-size:0.9rem; color:var(--bark); line-height:1.8;">We use only Naked Lab's professional-grade sugar paste — just sugar, lemon, and water. EWG Green Level rated, allergy-safe, and free from synthetics, resins, and harsh chemicals.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="background: var(--white); padding: 40px 36px; border-radius: 4px;">
+        <div style="width:52px; height:52px; background:var(--sand); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h4 style="font-family:var(--font-display); font-size:1.35rem; font-weight:500; margin-bottom:12px; color:var(--ink);">Sugaring Specialists — Not Generalists</h4>
+        <p style="font-size:0.9rem; color:var(--bark); line-height:1.8;">Sugaring is all we do. Every esthetician is trained specifically in the sugaring technique — not converted from waxing. The precision, the results, and the comfort all show.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div style="background: var(--white); padding: 40px 36px; border-radius: 4px;">
+        <div style="width:52px; height:52px; background:var(--sand); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4 style="font-family:var(--font-display); font-size:1.35rem; font-weight:500; margin-bottom:12px; color:var(--ink);">Two Locations, One Community</h4>
+        <p style="font-size:0.9rem; color:var(--bark); line-height:1.8;">Serving White Plains and the Bronx — because great skin care shouldn't require a commute. Locally rooted, professionally operated, and always welcoming.</p>
+      </div>
+
+    </div>
+    <div style="text-align:center;" class="fade-in">
+      <a href="#services-full" class="btn btn-primary">View Full Menu &amp; Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICES FULL MENU
+     ============================================ -->
+<section class="services-full section-anchor" id="services-full">
+  <div class="container">
+    <div class="services-intro fade-in">
+      <p class="subhead">Service Menu</p>
+      <h2>Our Treatments</h2>
+      <p>All services use Naked Lab's premium organic sugar paste, formulated by master estheticians with over 100,000 treatment cases.</p>
+    </div>
+    <div class="menu-grid fade-in">
+      <!-- Facial -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Facial</h3>
+        <div class="menu-item"><span class="menu-item-name">Upper Lip</span><span class="menu-item-price">$10</span></div>
+        <div class="menu-item"><span class="menu-item-name">Chin</span><span class="menu-item-price">$15</span></div>
+        <div class="menu-item"><span class="menu-item-name">Cheeks</span><span class="menu-item-price">$15</span></div>
+        <div class="menu-item"><span class="menu-item-name">Sideburns</span><span class="menu-item-price">$10</span></div>
+        <div class="menu-item"><span class="menu-item-name">Neck</span><span class="menu-item-price">$15</span></div>
+      </div>
+      <!-- Bikini -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Bikini &amp; Intimate</h3>
+        <div class="menu-item"><span class="menu-item-name">Brazilian</span><span class="menu-item-price">$60</span></div>
+        <div class="menu-item"><span class="menu-item-name">Extended Bikini</span><span class="menu-item-price">$45</span></div>
+        <div class="menu-item"><span class="menu-item-name">Bikini Sides</span><span class="menu-item-price">$30</span></div>
+        <div class="menu-item"><span class="menu-item-name">Inner Thigh</span><span class="menu-item-price">$15</span></div>
+        <div class="menu-item"><span class="menu-item-name">Butt Strip</span><span class="menu-item-price">$15</span></div>
+        <div class="menu-item"><span class="menu-item-name">Butt Cheeks</span><span class="menu-item-price">$20</span></div>
+        <div class="menu-item"><span class="menu-item-name">Peachy Smooth Vajacial</span><span class="menu-item-price">$65</span></div>
+      </div>
+      <!-- Body -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Body</h3>
+        <div class="menu-item"><span class="menu-item-name">Full Arms</span><span class="menu-item-price">$35</span></div>
+        <div class="menu-item"><span class="menu-item-name">Half Arms</span><span class="menu-item-price">$25</span></div>
+        <div class="menu-item"><span class="menu-item-name">Full Legs</span><span class="menu-item-price">$80</span></div>
+        <div class="menu-item"><span class="menu-item-name">Upper Legs</span><span class="menu-item-price">$45</span></div>
+        <div class="menu-item"><span class="menu-item-name">Lower Legs</span><span class="menu-item-price">$45</span></div>
+        <div class="menu-item"><span class="menu-item-name">Underarms</span><span class="menu-item-price">$15</span></div>
+      </div>
+      <!-- More Body -->
+      <div class="menu-section">
+        <h3 class="menu-section-title">Chest &amp; Back</h3>
+        <div class="menu-item"><span class="menu-item-name">Full Back</span><span class="menu-item-price">$40</span></div>
+        <div class="menu-item"><span class="menu-item-name">Half Back</span><span class="menu-item-price">$25</span></div>
+        <div class="menu-item"><span class="menu-item-name">Full Stomach</span><span class="menu-item-price">$35</span></div>
+        <div class="menu-item"><span class="menu-item-name">Lower Stomach</span><span class="menu-item-price">$20</span></div>
+        <div class="menu-item"><span class="menu-item-name">Breast</span><span class="menu-item-price">$10</span></div>
+        <div class="menu-item"><span class="menu-item-name">Nipples</span><span class="menu-item-price">$10</span></div>
+        <div class="menu-item"><span class="menu-item-name">Stomach Strip</span><span class="menu-item-price">$10</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PREP GUIDE & FAQ
+     ============================================ -->
+<section class="prep-section section-anchor" id="faq">
+  <div class="container">
+    <div class="prep-grid">
+      <div class="fade-in">
+        <p class="subhead" style="margin-bottom:12px;">Before Your Visit</p>
+        <h3>How to Prepare</h3>
+        <ul>
+          <li>Hair should be at least 1/4 inch long (the length of a grain of rice)</li>
+          <li>Exfoliate 2–3 times per week and moisturize daily between appointments</li>
+          <li>If transitioning from shaving, wait 14–21 days before your first session</li>
+          <li>On the day of your appointment, skip heavy oils, lotions, makeup, and deodorant on the treatment area</li>
+          <li>Do not exfoliate on the day of service</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <p class="subhead" style="margin-bottom:12px;">Common Questions</p>
+        <h3>FAQ</h3>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How often should I come in?</div>
+          <div class="faq-a">We recommend every 4–6 weeks for best results. Regular sugaring leads to finer, sparser regrowth over time.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I get sugared during pregnancy?</div>
+          <div class="faq-a">Yes! Sugaring is safe during pregnancy. We just ask that you let your esthetician know so they can adjust the treatment accordingly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is sugaring less painful than waxing?</div>
+          <div class="faq-a">Most clients find sugaring gentler than traditional waxing. The paste is applied at body temperature and removes hair in the natural direction of growth, reducing discomfort.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What if my hair is too short?</div>
+          <div class="faq-a">If your hair is shorter than 1/4 inch, we may need to reschedule to ensure the best results. This is the minimum length for the sugar paste to grip effectively.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     NAKED LAB — TEASER ON HOME
+     ============================================ -->
+<section class="nakedlab-teaser">
+  <div class="container">
+    <div class="nakedlab-teaser-inner fade-in">
+      <div class="nakedlab-teaser-image"></div>
+      <div class="nakedlab-teaser-text">
+        <p class="subhead">Powered by Naked Lab</p>
+        <h2>The Science Behind Your Smoothest Skin</h2>
+        <p>Every treatment at MM Sugar Wax uses Naked Lab — a professional-grade Korean skincare line crafted by master estheticians with over 100,000 treatment cases. Pure ingredients. No compromises.</p>
+        <a href="#nakedlab" class="btn btn-primary">Discover Naked Lab</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     NAKED LAB — FULL LANDING SECTION
+     ============================================ -->
+<section class="nakedlab-landing section-anchor" id="nakedlab">
+  <div class="container">
+
+    <!-- Brand Story -->
+    <div class="nl-story fade-in">
+      <div class="nl-story-text">
+        <p class="subhead">Our Products</p>
+        <h2>Naked Lab</h2>
+        <p>Born from the hands of Korea's top sugaring professionals, Naked Lab is a premium cosmetic brand built on real-world expertise. Every formula is developed from over 100,500 treatment cases and refined with input from the Korea Sugaring Association.</p>
+        <p>We don't just use these products — we trust them with every client who walks through our doors.</p>
+        <div class="nl-stats">
+          <div>
+            <div class="nl-stat-number">100,500+</div>
+            <div class="nl-stat-label">Treatment Cases</div>
+          </div>
+          <div>
+            <div class="nl-stat-number">62,650+</div>
+            <div class="nl-stat-label">Clients Served</div>
+          </div>
+          <div>
+            <div class="nl-stat-number">10+</div>
+            <div class="nl-stat-label">Award-Winning Products</div>
+          </div>
+        </div>
+      </div>
+      <div class="nl-story-image">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80" alt="Naked Lab Products" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="nl-trust fade-in">
+      <div class="divider-line"></div>
+      <h3>Trusted &amp; Certified</h3>
+      <div class="nl-badges">
+        <div class="nl-badge">
+          <div class="nl-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M8 12l3 3 5-5"/></svg>
+          </div>
+          <span class="nl-badge-text">EWG Green Level<br>All Ingredients</span>
+        </div>
+        <div class="nl-badge">
+          <div class="nl-badge-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          </div>
+          <span class="nl-badge-text">Allergy Safe<br>Zero Allergens</span>
+        </div>
+        <div class="nl-badge">
+          <div class="nl-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <span class="nl-badge-text">KATF 99.9%<br>Antibacterial Tested</span>
+        </div>
+        <div class="nl-badge">
+          <div class="nl-badge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="nl-badge-text">O'acle Dermatology<br>Clinically Tested</span>
+        </div>
+        <div class="nl-badge">
+          <div class="nl-badge-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <span class="nl-badge-text">Beauty Mentor Award<br>Grand Prize Winner</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exclusive Message -->
+    <div class="nl-exclusive fade-in">
+      <p>"We proudly use <span>Naked Lab</span> exclusively at MM Sugar Wax — because your skin deserves professional-grade care, from start to finish."</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     BOOK NOW CTA
+     ============================================ -->
+<section class="book-banner section-anchor" id="book">
+  <div class="container">
+    <p class="subhead">Ready?</p>
+    <h2>Book Your Appointment</h2>
+    <p>Choose your location and schedule your visit. Walk-ins welcome, appointments preferred.</p>
+    <!--
+      ============================================
+      VENDOR: Replace the href below with your
+      Google Appointment Schedule link.
+
+      Example: https://calendar.google.com/calendar/appointments/schedules/YOUR_ID
+      ============================================
+    -->
+    <a href="#" class="btn btn-gold" onclick="alert('Connect your Google Appointment Schedule link here.'); return false;">Book Now &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================================
+     LOCATIONS
+     ============================================ -->
+<section class="locations-section section-anchor" id="locations">
+  <div class="container">
+    <div class="locations-header fade-in">
+      <p class="subhead">Visit Us</p>
+      <h2>Our Locations</h2>
+    </div>
+    <div class="locations-grid fade-in">
+      <!-- White Plains -->
+      <div class="location-card">
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.8!2d-73.7683!3d41.0334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2946a123456%3A0x0!2s76+Mamaroneck+Ave+White+Plains+NY!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="location-info">
+          <h3>White Plains</h3>
+          <p>76 Mamaroneck Ave, Suite 9 (2nd Floor)</p>
+          <p>White Plains, NY 10601</p>
+          <p style="margin-top: 12px;">
+            <a href="tel:9147196545">914.719.6545</a>
+          </p>
+          <div class="location-cta">
+            <a href="#book" class="btn btn-outline" style="font-size:0.75rem; padding: 10px 20px;">Book This Location</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bronx -->
+      <div class="location-card">
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.8!2d-73.9295!3d40.8062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f123456%3A0x0!2s749+E+135th+St+Bronx+NY!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="location-info">
+          <h3>Bronx</h3>
+          <p>749 E 135th Street, Suite 1</p>
+          <p>Bronx, NY 10454</p>
+          <p style="margin-top: 12px;">
+            <a href="tel:9147196545">914.719.6545</a>
+          </p>
+          <div class="location-cta">
+            <a href="#book" class="btn btn-outline" style="font-size:0.75rem; padding: 10px 20px;">Book This Location</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo">MM <span>Sugar Wax</span></a>
+        <p>Organic sugaring hair removal in Westchester &amp; the Bronx. Gentle on skin. Kind to the planet.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#nakedlab">Naked Lab</a></li>
+          <li><a href="#locations">Locations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>White Plains</h5>
+        <ul>
+          <li>76 Mamaroneck Ave</li>
+          <li>Suite 9, 2nd Floor</li>
+          <li>White Plains, NY 10601</li>
+          <li><a href="tel:9147196545">914.719.6545</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Bronx</h5>
+        <ul>
+          <li>749 E 135th Street</li>
+          <li>Suite 1</li>
+          <li>Bronx, NY 10454</li>
+          <li><a href="tel:9147196545">914.719.6545</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MM Sugar Wax. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/mm.sugarwax" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="mailto:mmsugarwax@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     WHATSAPP BUTTON
+     ============================================ -->
+<a href="https://wa.me/19147196545" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+// Sticky Nav
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile Menu
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
+
+// FAQ Toggle
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('open');
+}
+
+// Scroll Fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
