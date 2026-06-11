@@ -254,7 +254,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://raw.githubusercontent.com/michaelkanggg/mmsugarwax/main/hero-wax.jpg') center/cover no-repeat;
+  background: url('hero-wax-v2.jpg') center/cover no-repeat;
   filter: brightness(0.45);
 }
 
@@ -316,6 +316,27 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 .why-section {
   padding: var(--section-padding) 0;
   background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1600px;
+  height: 1200px;
+  background: url('wax-smear-cutout.png') center/contain no-repeat;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-section > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .why-header {
@@ -467,7 +488,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
 .nakedlab-teaser-image {
   aspect-ratio: 4/5;
-  background: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80') center/cover;
+  background: url('nakedlab-soothing-gel.jpg') center/cover;
   border-radius: 4px;
 }
 
@@ -789,7 +810,6 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
 /* Trust Badges */
 .nl-trust {
-  margin-top: 80px;
   text-align: center;
 }
 
@@ -1022,7 +1042,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 }
 
 /* ============================================
-   WHATSAPP FLOATING BUTTON
+   FLOATING SOCIAL BUTTONS
    ============================================ */
 .whatsapp-float {
   position: fixed;
@@ -1048,6 +1068,155 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
   width: 28px;
   height: 28px;
   fill: white;
+}
+
+.instagram-float {
+  position: fixed;
+  bottom: 92px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(220, 39, 67, 0.3);
+  z-index: 900;
+  transition: transform 0.3s;
+}
+
+.instagram-float:hover {
+  transform: scale(1.1);
+}
+
+.instagram-float svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* ============================================
+   BOOKING MODAL
+   ============================================ */
+.book-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeBackdrop 0.25s ease;
+}
+
+.book-modal.active {
+  display: flex;
+}
+
+@keyframes fadeBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.book-modal-content {
+  background: var(--cream);
+  border-radius: 8px;
+  max-width: 560px;
+  width: 100%;
+  padding: 48px 40px 40px;
+  position: relative;
+  text-align: center;
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.book-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--bark);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.book-modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.book-modal .subhead {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.book-modal h3 {
+  color: var(--ink);
+  margin-bottom: 28px;
+  font-size: 1.6rem;
+}
+
+.book-modal-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.book-modal-option {
+  display: block;
+  padding: 24px 20px;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  background: white;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.book-modal-option:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 176, 144, 0.15);
+}
+
+.book-modal-option h4 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.book-modal-option p {
+  font-size: 0.85rem;
+  color: var(--bark);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .book-modal-content {
+    padding: 40px 24px 32px;
+  }
+  .book-modal-options {
+    grid-template-columns: 1fr;
+  }
+  .book-modal h3 {
+    font-size: 1.35rem;
+  }
 }
 
 /* ============================================
@@ -1177,7 +1346,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
     </div>
   </div>
   <div class="hero-right">
-    <img src="https://raw.githubusercontent.com/michaelkanggg/mmsugarwax/main/hero-wax.jpg" alt="Pure orange sugar wax" />
+    <img src="hero-wax-v2.jpg" alt="Pure golden sugar wax being stretched between gloved hands" />
   </div>
 </section>
 
@@ -1403,24 +1572,6 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
       <div class="nakedlab-teaser-image"></div>
       <div class="nakedlab-teaser-text">
         <p class="subhead">Powered by Naked Lab</p>
-        <h2>The Science Behind Your Smoothest Skin</h2>
-        <p>Every treatment at MM Sugar Wax uses Naked Lab — a professional-grade Korean skincare line crafted by master estheticians with over 100,000 treatment cases. Pure ingredients. No compromises.</p>
-        <a href="#nakedlab" class="btn btn-primary">Discover Naked Lab</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     NAKED LAB — FULL LANDING SECTION
-     ============================================ -->
-<section class="nakedlab-landing section-anchor" id="nakedlab">
-  <div class="container">
-
-    <!-- Brand Story -->
-    <div class="nl-story fade-in">
-      <div class="nl-story-text">
-        <p class="subhead">Our Products</p>
         <h2>Naked Lab</h2>
         <p>Born from the hands of Korea's top sugaring professionals, Naked Lab is a premium cosmetic brand built on real-world expertise. Every formula is developed from over 100,500 treatment cases and refined with input from the Korea Sugaring Association.</p>
         <p>We don't just use these products — we trust them with every client who walks through our doors.</p>
@@ -1439,10 +1590,15 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
           </div>
         </div>
       </div>
-      <div class="nl-story-image">
-        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80" alt="Naked Lab Products" style="width:100%;height:100%;object-fit:cover;">
-      </div>
     </div>
+  </div>
+</section>
+
+<!-- ============================================
+     NAKED LAB — FULL LANDING SECTION
+     ============================================ -->
+<section class="nakedlab-landing section-anchor" id="nakedlab">
+  <div class="container">
 
     <!-- Trust Badges -->
     <div class="nl-trust fade-in">
@@ -1498,15 +1654,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
     <p class="subhead">Ready?</p>
     <h2>Book Your Appointment</h2>
     <p>Choose your location and schedule your visit. Walk-ins welcome, appointments preferred.</p>
-    <!--
-      ============================================
-      VENDOR: Replace the href below with your
-      Google Appointment Schedule link.
-
-      Example: https://calendar.google.com/calendar/appointments/schedules/YOUR_ID
-      ============================================
-    -->
-    <a href="#" class="btn btn-gold" onclick="alert('Connect your Google Appointment Schedule link here.'); return false;">Book Now &rarr;</a>
+    <a href="#" class="btn btn-gold" onclick="openBookModal(); return false;">Book Now &rarr;</a>
   </div>
 </section>
 
@@ -1533,7 +1681,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
             <a href="tel:9147196545">914.719.6545</a>
           </p>
           <div class="location-cta">
-            <a href="#book" class="btn btn-outline" style="font-size:0.75rem; padding: 10px 20px;">Book This Location</a>
+            <a href="https://www.vagaro.com/googlemap/U2FsdGVkX1-SjZ5h7Qv0xcW9VTW6~xjo4KDS4dpuSlU=/services?rwg_token=AFd1xnHEheqIJhO2dlI6zjGiW52Tv4EgKj5kMopyOBdraFQlCs94BJh1yshLoJNmhClEIZMJ1sK7TUDFF7RVdfJPy_wX7xlnGA%3D%3D" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.75rem; padding: 10px 20px;">Book This Location</a>
           </div>
         </div>
       </div>
@@ -1550,7 +1698,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
             <a href="tel:9147196545">914.719.6545</a>
           </p>
           <div class="location-cta">
-            <a href="#book" class="btn btn-outline" style="font-size:0.75rem; padding: 10px 20px;">Book This Location</a>
+            <a href="https://www.vagaro.com/googlemap/U2FsdGVkX1~RJhEqmQU~g3I7yKRxsSpA8CIwiCId10E=/services?rwg_token=AFd1xnGi02uZYxv1h2Cubf8PJDE3YruPE_vOh5YHkJ0uYejtY-JZt8O6-I7Fxl27TocppXXOLv8cTrQVQfXbqWdeD5iaRpN9Dw%3D%3D" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.75rem; padding: 10px 20px;">Book This Location</a>
           </div>
         </div>
       </div>
@@ -1611,6 +1759,34 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 </footer>
 
 <!-- ============================================
+     BOOKING MODAL
+     ============================================ -->
+<div id="bookModal" class="book-modal" role="dialog" aria-modal="true" aria-labelledby="bookModalTitle">
+  <div class="book-modal-content">
+    <button class="book-modal-close" onclick="closeBookModal()" aria-label="Close">&times;</button>
+    <p class="subhead">Choose Your Location</p>
+    <h3 id="bookModalTitle">Where would you like to book?</h3>
+    <div class="book-modal-options">
+      <a href="https://www.vagaro.com/googlemap/U2FsdGVkX1-SjZ5h7Qv0xcW9VTW6~xjo4KDS4dpuSlU=/services?rwg_token=AFd1xnHEheqIJhO2dlI6zjGiW52Tv4EgKj5kMopyOBdraFQlCs94BJh1yshLoJNmhClEIZMJ1sK7TUDFF7RVdfJPy_wX7xlnGA%3D%3D" target="_blank" rel="noopener" class="book-modal-option">
+        <h4>White Plains</h4>
+        <p>76 Mamaroneck Ave, Suite 9<br>(2nd Floor)</p>
+      </a>
+      <a href="https://www.vagaro.com/googlemap/U2FsdGVkX1~RJhEqmQU~g3I7yKRxsSpA8CIwiCId10E=/services?rwg_token=AFd1xnGi02uZYxv1h2Cubf8PJDE3YruPE_vOh5YHkJ0uYejtY-JZt8O6-I7Fxl27TocppXXOLv8cTrQVQfXbqWdeD5iaRpN9Dw%3D%3D" target="_blank" rel="noopener" class="book-modal-option">
+        <h4>Bronx</h4>
+        <p>749 E 135th Street<br>Suite 1</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     INSTAGRAM BUTTON
+     ============================================ -->
+<a href="https://www.instagram.com/mm.sugarwax/" class="instagram-float" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+</a>
+
+<!-- ============================================
      WHATSAPP BUTTON
      ============================================ -->
 <a href="https://wa.me/19147196545" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
@@ -1636,6 +1812,29 @@ function toggleMobileMenu() {
 function toggleFaq(el) {
   el.parentElement.classList.toggle('open');
 }
+
+// Booking Location Modal
+function openBookModal() {
+  const modal = document.getElementById('bookModal');
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBookModal() {
+  const modal = document.getElementById('bookModal');
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close modal on backdrop click
+document.getElementById('bookModal').addEventListener('click', (e) => {
+  if (e.target.id === 'bookModal') closeBookModal();
+});
+
+// Close modal on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeBookModal();
+});
 
 // Scroll Fade-in
 const observer = new IntersectionObserver((entries) => {
